@@ -6,7 +6,24 @@ import conectDB from "./DB/dbConnection.js";
 
 
 dotenv.config({path:'./env'});
-conectDB();
+
+
+//if database connetion is failed then we have to show an error so for this purpose promise() are used.
+conectDB()
+.then(()=>{
+ app.listen(process.env.PORT || 8000 ,()=>{
+    console.log(`Server is running at port :${process.env.PORT}`);
+    app.on("error",(error)=>
+    {
+         console.log("Error :",error);
+         throw error;
+    })
+    
+ })
+})
+.catch((err)=>{
+    console.log(`MongoDb connection failed !!! ${err}`);
+});
 
 
 // approach no-1
