@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import cookieParser from "cookie-parser";
+import express from "express";//routing 
+import cors from "cors";//server setup
+import cookieParser from "cookie-parser";//server setup
 
 
 const app=express();

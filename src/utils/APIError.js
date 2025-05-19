@@ -1,12 +1,7 @@
 // when api error comes then execute this code
 class APIError extends Error
 {
-    constructor(
-        statusCode,
-        message="something Went wrong.",
-        errors=[],
-        stack=""
-    )
+    constructor(statusCode, message="something Went wrong.",errors=[],stack="")
     {
         super(message)
         this.statusCode=statusCode

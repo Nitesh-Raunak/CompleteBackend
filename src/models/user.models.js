@@ -1,3 +1,4 @@
+//user model
 import mongoose ,{Schema} from "mongoose";
 import bcrpt from "bcrypt";
 import jwt from "jsonwebtoken";
