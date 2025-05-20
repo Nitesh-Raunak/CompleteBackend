@@ -19,6 +19,7 @@ conectDB()
     {
          console.log("Error :",error);
          throw error;
+         
     }) 
  })
 })

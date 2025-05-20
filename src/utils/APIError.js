@@ -8,10 +8,11 @@ class APIError extends Error
         this.data=null
         this.message=message
         this.success=false;
-        this.errors=errors;
+        this.errors=errors;//errors array means multiple error
 
         if(stack)
         {
+            //stack means error stacks(how error are comes and how to handles)
             this.stack=stack
 
         }
