@@ -2,7 +2,6 @@
 import express from "express";//routing 
 import cors from "cors";//server setup
 import cookieParser from "cookie-parser";//server setup
-
 const app=express();
 
 //app.use()   is used for all middleware file or configurations files.
@@ -24,6 +23,21 @@ app.use(express.static("public"));
 
 //cookies-parser (for storing the cookies of users)
 app.use(cookieParser());
+
+// if we have to keep this portion of code in index.js or in file main then we have to keep this in that folder.
+//routes import
+import router from "./routes/user.routes.js";
+
+//route declarations
+// app.use("/users",userRouter)
+app.use('/api/v1/users',router)
+
+//url eg- http://localhost:8000/users/register
+// http://localhost:8000/users/login
+// http://localhost:8000/api/v1/users/register
+
+
+
 
 
 

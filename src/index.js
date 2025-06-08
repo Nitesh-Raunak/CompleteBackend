@@ -5,10 +5,9 @@
 
 
 // this is for approach no-2 (which is in DB folder)
-import express from "express";//routing 
 import dotenv from "dotenv";//dotenv is used for loading the env file everywhere where it used in entire websites.
 import conectDB from "./DB/dbConnection.js";
-const app=express();
+import { app } from "./app.js";
 dotenv.config({path:'./env'});
 //if database connetion is failed then we have to show an error so for this purpose promise() are used.
 conectDB()
@@ -27,11 +26,35 @@ conectDB()
     console.log(`MongoDb connection failed !!! ${err}`);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 approach no-1
 import mongoose from "mongoose";
 import {DB_Name} from "./constants";
-import express from  "express";
+import express from  "express";//routing
 const app=express();
 //iife concept for async
 (async()=>{
