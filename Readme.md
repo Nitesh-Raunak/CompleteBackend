@@ -9,3 +9,4 @@
 # utiles/service both are same where we will write code of service that we will provides again and again
 
 
+# shark 256 is SHA-256 algorithm , a cryptographic hash function that generate a 256-bit hash.
