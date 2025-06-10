@@ -54,7 +54,7 @@ const userSchema = new Schema({
 // DB processing is time consuming that's why async funtion we have to use
 userSchema.pre("save", async function (next) {
     if (this.isModified("password")) {
-        this.password = bcrpt.hash(this.password, 10);    //encryption of password
+        this.password = await bcrpt.hash(this.password, 10);    //encryption of password
         next();
     }
     return next();
